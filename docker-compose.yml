@@ -6,3 +6,10 @@ services:
     build:
       context: .
       dockerfile: MoviesApi/Dockerfile
+
+  services:
+  db:
+    image: "mcr.microsoft.com/mssql/server:2019-latest"
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=someThingComplicated1234
